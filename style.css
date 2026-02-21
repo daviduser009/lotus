@@ -1,0 +1,721 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #fff;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* NAVBAR */
+header {
+  background: #f5f5f5;
+  padding: 15px 25px;
+}
+
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo-whats{
+    width: 100%;
+}
+
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  width: 70%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7a2e3a;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+
+/* HERO */
+.hero {
+  background: #c05472;
+  color: white;
+  padding: 60px 0;
+}
+
+.lotus-banner{
+    width: 75px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-text {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.text-banner{
+    text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  line-height: 1.1;
+}
+
+.hero-text ul {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.hero-text li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background: rgb(243, 164, 170);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.microcopy{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.05);
+}
+
+/* CLÍNICA */
+.clinica {
+  padding: 100px 0;
+  background: #f7f7f7;
+}
+
+.clinica h2 {
+  font-size: 36px;
+  color: #c05472;
+  margin-bottom: 30px;
+}
+
+.clinica-text {
+  margin-bottom: 50px;
+}
+
+.clinica-text p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-size: 17px;
+  color: #555;
+}
+
+.clinica-text strong {
+  color: #7a2e3a;
+}
+
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  height: 250px;
+  transition: 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.cta-center {
+  text-align: center;
+}
+
+.nutri-banner{
+    margin-top: 70px;
+    padding: 40px;
+    background-color: #ffd2de;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 0px 10px rgba(0,0,0,0.2);
+}
+
+.nutri-text{
+    color: #7a2f44;
+    font-size: 30px;
+    font-weight: bold;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* ESPECIALIDADES */
+.especialidades {
+  padding: 60px 0;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  color: #7a2e3a;
+  font-weight: bold;
+}
+
+.section-icon {
+  width: 60px;
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.item-card h3{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #a83e59;
+}
+
+.center-btn{
+    padding: 30px 0;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+.card-item {
+  text-align: center;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 350px;
+}
+
+/* IMAGEM */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* OVERLAY (invisível por padrão) */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  opacity: 0;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(192, 84, 114, 0.85) 0%,
+    rgba(176, 63, 95, 0.92) 70%,
+    rgba(150, 40, 70, 0.98) 100%
+  );
+
+  transition: opacity 0.4s ease;
+}
+
+/* HOVER */
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* TÍTULO FIXO ABAIXO */
+.card-title {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #7a2f44;
+}
+
+/* ===== SEÇÃO DOUTORAS ===== */
+.doctors {
+  background: #c45673;
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header img{
+    width: 80px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.icon-top {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.doctor-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.doctor-card {
+  background: #f3f3f3;
+  width: 420px;
+  min-height: 420px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.4s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.doctor-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 25px;
+}
+
+.doctor-card h3 {
+  font-size: 24px;
+  color: #7a2f44;
+  margin-bottom: 10px;
+}
+
+.doctor-card span {
+  color: #7a2f44;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+/* BOTÃO */
+.btn-doctor {
+  background: #d59a64;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-doctor:hover {
+  background: #c07f4a;
+}
+
+/* ===== DEPOIMENTOS ===== */
+.testimonials {
+  background: #e6caca;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+}
+
+.testimonials h2 {
+  font-size: 32px;
+  color: #7a2f44;
+  margin-bottom: 50px;
+}
+
+/* CARROSSEL */
+.carousel {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+  min-width: 100%;
+  background: #f3f3f3;
+  padding: 40px;
+  border-radius: 10px;
+  opacity: 0;
+  user-select: none;
+  transition: opacity 0.4s ease;
+}
+
+.testimonial-card.active {
+  opacity: 1;
+}
+
+.testimonial-card h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: #f4b400;
+  margin-bottom: 15px;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.carousel-track {
+  cursor: grab;
+}
+
+.carousel-track:active {
+  cursor: grabbing;
+}
+
+/* SETAS */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #7a2f44;
+}
+
+.left {
+  left: -40px;
+}
+
+.right {
+  right: -40px;
+}
+
+/* DOTS */
+.dots {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #7a2f44;
+}
+
+/* ===== CONTATO ===== */
+.contact {
+  background: #f3f3f3;
+  padding: 100px 0;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #7a2f44;
+  margin-bottom: 60px;
+}
+
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* INFO */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h4 {
+  color: #7a2f44;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* BOTÃO */
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #c45673;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-contact:hover {
+  background: #a83e59;
+}
+
+/* MAPA */
+.contact-map {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter {
+  display: flex;
+  min-height: 400px;
+}
+
+.newsletter-left {
+  flex: 1;
+  background: #c45673;
+  padding: 80px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsletter-left h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.newsletter-left p {
+  margin-bottom: 30px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 14px 20px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.newsletter-form button {
+  background: #f3d2d2;
+  color: #7a2f44;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  background: #fff;
+}
+
+/* IMAGEM */
+.newsletter-right {
+  flex: 1;
+}
+
+.newsletter-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #f3f3f3;
+  padding: 70px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  color: #7a2f44;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #555;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #c45673;
+}
+
+/* SOCIAL */
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #c45673;
+  color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  background: #a83e59;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+.whatsapp-float{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(10, 10, 10, 0);
+  border: none;
+  width: 70px;
+  height: 70px;
+  margin: 20px;
+}
+
